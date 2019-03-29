@@ -5,12 +5,11 @@ import java.util.ArrayList;
 public class Torneo {
 	private int nroFechas;
 	private String nombreDelTorneo;
-	private ArrayList<Equipo> equipos;
+	private ArrayList<Equipo> equipos = new ArrayList<Equipo>();
 	
 	public Torneo(String nombreDelTorneo, int nroFechas) {		
 		this.nombreDelTorneo = nombreDelTorneo;
 		this.nroFechas = nroFechas;
-		equipos = new ArrayList<>();
 	}
 
 	public int getNroFechas() {

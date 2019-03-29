@@ -6,44 +6,59 @@ public class Equipo {
 	private String nombreEquipo;
 	private String nombreTecnico;	
 	private int nroJugadores;
-	private ArrayList<Jugador> jugador;
+	private ArrayList<Jugador>jugadores = new ArrayList<>();
 	
-	public Equipo() {		
+	public Equipo() {
 		this.nombreEquipo = nombreEquipo;
 		this.nombreTecnico = nombreTecnico;		
-		jugador =new ArrayList<>();
+		this.jugadores =new ArrayList<>();
+	}
+	
+	public String consultarJugadoresEnPosicion() {
+		String listaJugadores = null;
+		for (Jugador jugador : jugadores) {
+			if (jugador.getPosicion() == "defensa") {
+				listaJugadores = jugador.getNombreJugador();
+				System.out.println("El jugador en la posicion de "+jugador.getPosicion()+" es: "+listaJugadores+"\n");
+			}else if(jugador.getPosicion() == "delantero") 
+				listaJugadores = jugador.getNombreJugador();{
+				System.out.println("No hay jugadores en esa posicion");
+				break;
+			}
+		}
+		return "";
 	}
 
 	public String getNombreEquipo() {
 		return nombreEquipo;
 	}
 
-	public void setNombreEquipo(String nombreEquipo) {
-		this.nombreEquipo = nombreEquipo;
-	}
-
-	public String getTecnico() {
+	public String getNombreTecnico() {
 		return nombreTecnico;
-	}
-
-	public void setNombreTecnico(String tecnico) {
-		this.nombreTecnico = tecnico;
 	}
 
 	public int getNroJugadores() {
 		return nroJugadores;
 	}
 
+	public ArrayList<Jugador> getJugadores() {
+		return jugadores;
+	}
+
+	public void setNombreEquipo(String nombreEquipo) {
+		this.nombreEquipo = nombreEquipo;
+	}
+
+	public void setNombreTecnico(String nombreTecnico) {
+		this.nombreTecnico = nombreTecnico;
+	}
+
 	public void setNroJugadores(int nroJugadores) {
 		this.nroJugadores = nroJugadores;
 	}
 
-	public ArrayList<Jugador> getJugador() {
-		return jugador;
+	public void setJugadores(ArrayList<Jugador> jugadores) {
+		this.jugadores = jugadores;
 	}
-
-	public void setJugador(ArrayList<Jugador> jugador) {
-		this.jugador = jugador;
-	}
-
+	
 }

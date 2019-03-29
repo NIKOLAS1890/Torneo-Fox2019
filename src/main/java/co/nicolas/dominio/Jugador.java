@@ -6,7 +6,7 @@ public class Jugador {
 	private int nroCamiseta;
 	private String posicion;
 	
-	public Jugador(String nombreJugador, int edad, String posicion) {
+	public Jugador() {
 		this.nombreJugador = nombreJugador;
 		this.edad = edad;
 		this.posicion = posicion;
