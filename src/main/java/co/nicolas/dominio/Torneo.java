@@ -11,7 +11,22 @@ public class Torneo {
 		this.nombreDelTorneo = nombreDelTorneo;
 		this.nroFechas = nroFechas;
 	}
-
+	
+	public Torneo() {		
+		this.nombreDelTorneo = nombreDelTorneo;
+		this.nroFechas = nroFechas;
+	}
+	public String verEquiposDeTorneo() {
+		String listaEquipos = null;
+		for (Equipo equipo : equipos) {
+			if (equipo.getNroJugadores() > 1) {
+				listaEquipos = equipo.getNombreEquipo();
+				System.out.println("Equipo participante: "+listaEquipos);
+			}
+		}
+		return "";
+	}
+	
 	public int getNroFechas() {
 		return nroFechas;
 	}

@@ -5,6 +5,7 @@ import java.util.function.Consumer;
 
 import co.nicolas.dominio.Equipo;
 import co.nicolas.dominio.Jugador;
+import co.nicolas.dominio.Torneo;
 import jdk.nashorn.internal.runtime.ListAdapter;
 
 public class Main {
@@ -12,9 +13,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Equipo equipo = new Equipo();
-		
-		
-		
+		Torneo torneo = new Torneo();		
 		
 		ArrayList<Equipo> equipos = new ArrayList<Equipo>();
 		
@@ -37,7 +36,7 @@ public class Main {
 		equipos.add(medellin);
 		
 		Equipo rionegro = new Equipo();
-		rionegro.setNombreEquipo("NACIONAL");
+		rionegro.setNombreEquipo("RIONEGRO");
 		rionegro.setNombreTecnico("EVER HUGO ALMEIDA");
 		rionegro.setNroJugadores(16);
 		equipos.add(rionegro);
@@ -73,6 +72,9 @@ public class Main {
 		jugadores.add(jugadorRionegro);
 		
 		equipo.setJugadores(jugadores);
+		torneo.setEquipos(equipos);
+		
 		System.out.println(equipo.consultarJugadoresEnPosicion());
+		System.out.println(torneo.verEquiposDeTorneo());
 	}
 }

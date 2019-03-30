@@ -19,11 +19,7 @@ public class Equipo {
 		for (Jugador jugador : jugadores) {
 			if (jugador.getPosicion() == "defensa") {
 				listaJugadores = jugador.getNombreJugador();
-				System.out.println("El jugador en la posicion de "+jugador.getPosicion()+" es: "+listaJugadores+"\n");
-			}else if(jugador.getPosicion() == "delantero") 
-				listaJugadores = jugador.getNombreJugador();{
-				System.out.println("No hay jugadores en esa posicion");
-				break;
+				System.out.println("El jugador en la posicion de "+jugador.getPosicion()+" es: "+listaJugadores);
 			}
 		}
 		return "";
